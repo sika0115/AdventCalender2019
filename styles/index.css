@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body {
-    background-image : url();
-    background-size: cover;
+img {
+    max-width: 100%;
+    height: auto;    
 }

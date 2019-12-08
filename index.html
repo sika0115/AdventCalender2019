@@ -3,9 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>MerryChristmas</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/index.css">  
   </head>
 
   <body> 
+      <p class="resize">
+        <img id="pics" src="pics/image00.png">
+      </p>
+      <!-- JavaScript 画像を時間経過に応じて変更する-->
+      <script>
+        var pics_src = new Array("pics/image00.png",
+                                 "pics/image01.png",
+                                 "pics/image02.png",
+                                 "pics/image03.png",
+                                 "pics/image04.png",
+                                 "pics/image05.png");
+        var num = -1;
+
+        slideshow_timer();
+
+        function slideshow_timer(){
+          if (num == 5){
+              num = 0;
+          } 
+          else {
+              num ++;
+          }
+          document.getElementById("pics").src = pics_src[num];
+          setTimeout("slideshow_timer()",1000); 
+      }
+      </script>
   </body>
 </html>
